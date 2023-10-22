@@ -1,42 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&family=Fraunces:opsz,wght@9..144,900&display=swap');
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  max-width: min(calc(100vw - 30px), 1100px);
+  margin-left: auto !important;
+  margin-right: auto !important;
+  flex: 1 0 auto;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
+.hero {
+  margin: 8em 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
 }
-
-.description p {
+.heroText {
+  width: 80%;
+}
+.heroMainBgColor {
   position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  background-color: var(--amber);
+  padding: 6em;
+  height: 100%;
+  overflow: hidden;
+  border-top-left-radius: 115px;
+  border-bottom-right-radius: 115px;
+}
+.heroSecondaryBgColor {
+  position: absolute;
+  background-color: var(--night);
+  padding: 2em;
+  width: 100%;
+  bottom: 0;
+  border-top-left-radius: 115px;
+}
+.hero h1 {
+  font-size: var(--font-size-gigantic);
+  font-family: 'Fraunces', serif;
+  margin-bottom: 42px;
+  line-height: 59px;
+}
+.subheading {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  margin-bottom: 1em;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3em;
 }
 
 .grid {
@@ -44,32 +60,6 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: var(--max-width);
   width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
 }
 
 .center {
@@ -107,7 +97,7 @@
 .logo {
   position: relative;
 }
-/* Enable hover only on non-touch devices */
+/********** Enable hover only on non-touch devices **********/
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
@@ -125,12 +115,14 @@
   }
 }
 
-/* Mobile */
+/********** Mobile **********/
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
   }
-
+  .hero h1 {
+    font-size: var(--font-size-huge);
+  }
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
@@ -202,28 +194,12 @@
   }
 }
 
-/* Tablet and Smaller Desktop */
+/********** Tablet and Smaller Desktop **********/
 @media (min-width: 701px) and (max-width: 1120px) {
+  .hero h1 {
+    font-size: var(--font-size-massive);
+  }
   .grid {
     grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
   }
 }
