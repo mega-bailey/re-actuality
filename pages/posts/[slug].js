@@ -72,7 +72,17 @@ export default function BlogPost({ post }) {
         <div className={styles.blogHero}>
           <div className={styles.blogHeroText}>
             <h2 className={styles.blogHeroTitle}>{post.title}</h2>
+            <div className={styles.cardAuthorContainer}>
+              <div className={styles.authtext}>
+                <p>By {post.author.name}</p>
+                <p className={styles.date}>{post.datePublished}</p>
+              </div>
+              <div className={styles.cardAuthorImage}>
+                <img src={post.author.avatar.url} alt='' />
+              </div>
+            </div>
           </div>
+
           <div className={styles.blogHeroImage}>
             <img
               src={post.postPhoto.url}
@@ -80,15 +90,7 @@ export default function BlogPost({ post }) {
               alt={post.title}
             />
           </div>
-        </div>
-        <div className={styles.cardAuthorContainer}>
-          <div className={styles.authtext}>
-            <p>By {post.author.name}</p>
-            <p className={styles.date}>{post.datePublished}</p>
-          </div>
-          <div className={styles.cardAuthorImage}>
-            <img src={post.author.avatar.url} alt='' />
-          </div>
+          <div className={styles.heroMainBgColor}></div>
         </div>
         <div
           className={styles.content}
