@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&family=Fraunces:opsz,wght@9..144,900&display=swap');
+
+.navbar {
+  background-color: var(--night);
+  color: var(--bg-white);
+  padding: 1.5em 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.navbar {
+  list-style: none;
+}
+.navbarRight {
+  display: flex;
+  gap: 2em;
+}
+.logo {
+  font-family: 'Fraunces', serif;
+  color: var(--bg-white);
+  font-size: 1.7rem;
+  line-height: 15px;
+}
+.hover {
+  display: inline-block;
+  position: relative;
+}
+.hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--amber);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

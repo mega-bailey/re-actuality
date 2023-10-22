@@ -32,16 +32,16 @@
 .heroSecondaryBgColor {
   position: absolute;
   background-color: var(--night);
-  padding: 2em;
+  padding: 1.5em;
   width: 100%;
   bottom: 0;
-  border-top-left-radius: 115px;
+  border-top-left-radius: 15px;
 }
 .hero h1 {
   font-size: var(--font-size-gigantic);
   font-family: 'Fraunces', serif;
   margin-bottom: 42px;
-  line-height: 59px;
+  line-height: 60px;
 }
 .subheading {
   font-size: var(--font-size-medium);
@@ -62,7 +62,7 @@
   width: 100%;
 }
 
-.center {
+/* .center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,11 +92,8 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
-}
+} */
 
-.logo {
-  position: relative;
-}
 /********** Enable hover only on non-touch devices **********/
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
