@@ -14,9 +14,9 @@ export const Navbar = () => {
           </li>
         </div>
         <div className={styles.navbarRight}>
-          <a href='/about' className={styles.hover}>
+          <Link href='/about' className={styles.hover}>
             <li>About</li>
-          </a>
+          </Link>
           <Link href='/contact' className={styles.hover}>
             <li>Contact</li>
           </Link>
