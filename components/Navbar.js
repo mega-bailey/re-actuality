@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from '@/styles/Navbar.module.css';
 
 export const Navbar = () => {
@@ -7,18 +8,18 @@ export const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.navbarLeft}>
           <li className={styles.logo}>
-            <a href='#' className={styles.hover}>
+            <Link href={'/'} className={styles.hover}>
               Re-<br></br> actuality
-            </a>
+            </Link>
           </li>
         </div>
         <div className={styles.navbarRight}>
           <a href='/about' className={styles.hover}>
             <li>About</li>
           </a>
-          <a href='/contact' className={styles.hover}>
+          <Link href='/contact' className={styles.hover}>
             <li>Contact</li>
-          </a>
+          </Link>
         </div>
       </div>
     </header>
